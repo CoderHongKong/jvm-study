@@ -75,11 +75,19 @@ public class MyTest16 extends ClassLoader {
         return defineClass(className, b, 0, b.length);
     }
 
+
+    public MyTest16(ClassLoader parent){
+        super(parent);
+    }
+
+
     public static void test(ClassLoader classLoader) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         Class<?> clazz = classLoader.loadClass("com.blueberry.jvm.classloader.MyTest1");
         Object o = clazz.newInstance();
         System.out.println(o);
     }
+
+
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
 
