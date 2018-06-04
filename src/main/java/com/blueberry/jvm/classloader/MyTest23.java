@@ -1,7 +1,5 @@
 package com.blueberry.jvm.classloader;
 
-import sun.misc.Launcher;
-
 /**
  *
  * 在运行期，一个Java类是由该类的完全限定名（binary name，二进制名）和用于加载该类的定义类加载器（defining Loader）所共同决定的。
@@ -34,7 +32,7 @@ public class MyTest23 {
         */
         System.out.println(ClassLoader.class.getClassLoader());
         // 扩展类加载器和系统类加载器也是由启动类加载器加载的
-        System.out.println(Launcher.class.getClassLoader());
+//        System.out.println(Launcher.class.getClassLoader());
 
         System.out.println("---------------");
 
