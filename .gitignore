@@ -1,6 +1,14 @@
 # Compiled class file
 *.class
 
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+.DS_Store
+
+
 # Log file
 *.log
 
@@ -22,3 +30,4 @@
 hs_err_pid*
 .gradle/
 out/
+build/
