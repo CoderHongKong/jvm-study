@@ -9,7 +9,7 @@ import java.io.InputStream;
 
 /**
  * @author hekai
- * @create 2018-03-15 下午7:37
+ * @date 2018-03-15 下午7:37
  */
 
 public class MyTest16 extends ClassLoader {
@@ -18,7 +18,7 @@ public class MyTest16 extends ClassLoader {
     @Setter
     private String path;
 
-    private static final String fileExtension = ".class";
+    private static final String FILE_EXTENSION = ".class";
 
     public MyTest16(String classLoaderName) {
         super(); // 将系统类加载器作为该类的默认类加载器
@@ -26,7 +26,8 @@ public class MyTest16 extends ClassLoader {
     }
 
     public MyTest16(ClassLoader parent, String classLoaderName) {
-        super(parent); // 显示指定该类的默认加载器
+        // 显示指定该类的默认加载器
+        super(parent);
         this.classLoaderName = classLoaderName;
     }
 
@@ -44,7 +45,7 @@ public class MyTest16 extends ClassLoader {
         className = className.replace(".", "/");
         try {
 
-            is = new FileInputStream(new File(this.path + className + fileExtension));
+            is = new FileInputStream(new File(this.path + className + FILE_EXTENSION));
             baos = new ByteArrayOutputStream();
             int ch;
             while (-1 != (ch = is.read())) {

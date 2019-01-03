@@ -15,7 +15,7 @@ dependencies {
     compile 'mysql:mysql-connector-java:5.1.34'
 }
 
-task "create-dirs" << {
-    sourceSets*.java.srcDirs*.each { it.mkdirs() }
-    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
-}
+//task "create-dirs" << {
+//    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+//    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+//}
